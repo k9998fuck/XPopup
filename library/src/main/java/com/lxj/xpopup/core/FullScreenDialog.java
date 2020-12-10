@@ -96,7 +96,7 @@ public class FullScreenDialog extends Dialog {
 
     public boolean isActivityStatusBarLightMode() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            View decorView = ((Activity) contentView.getContext()).getWindow().getDecorView();
+            View decorView = getWindow().getDecorView();
             int vis = decorView.getSystemUiVisibility();
             return (vis & View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR) != 0;
         }
