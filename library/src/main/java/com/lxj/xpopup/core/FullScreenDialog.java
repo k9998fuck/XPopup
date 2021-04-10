@@ -22,6 +22,8 @@ import com.lxj.xpopup.util.XPopupUtils;
 public class FullScreenDialog extends Dialog {
     public FullScreenDialog(@NonNull Context context) {
         super(context, R.style._XPopup_TransparentDialog);
+        setCancelable(false);
+        setCanceledOnTouchOutside(false);
     }
 
     @Override
